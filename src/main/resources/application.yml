@@ -1,0 +1,20 @@
+spring:
+  application:
+  name: EventCleanJava
+
+  datasource:
+    url: jdbc:h2:mem:eventcleanjava
+    username: bssallex
+    password: bssallex
+    driver-class-name: org.h2.Driver
+    h2:
+      console:
+        enabled: true
+        path: /h2-console
+
+  jpa:
+    show-sql: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration

@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: EventCleanJava
+    environment:
+      POSTGRES_DB: eventcleanjava
+      POSTGRES_USER: bssallex
+      POSTGRES_PASSWORD: bssallex
+    ports:
+      - "5431:5432"
+    restart: always
