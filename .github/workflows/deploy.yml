@@ -22,7 +22,7 @@ jobs:
       - name: Run All Tests
         run: mvn test
 
-      - name: Build Artifact
+      - name: Build artifact
         run: mvn clean package
 
       - name: Store Artifact
