@@ -1,0 +1,20 @@
+name: Build and deploy of EventClean
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubunto-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+
+      - name: Configure Java
+        uses: actions/setup-java@3
+        with:
+          java-verion: '17'
+          distribution: 'temurin'
+
+      - name: Build Project
+        run: mvn clean install
